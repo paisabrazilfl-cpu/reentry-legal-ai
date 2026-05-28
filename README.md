@@ -108,6 +108,30 @@ pnpm --filter @workspace/api-spec run codegen
 
 ---
 
+## CI/CD Setup
+
+The project ships with a GitHub Actions workflow (`.github/workflows/ci.yml`) that runs typecheck and lint on every pull request, then triggers a Replit deployment on every push to `main`.
+
+The deploy step calls the Replit deployment API and requires two **GitHub repository secrets** to be set before it will succeed.
+
+### Required secrets
+
+| Secret | What it is | Where to find it |
+|---|---|---|
+| `REPLIT_TOKEN` | A personal API token that authenticates requests to the Replit API on your behalf | Replit → Account settings → **API tokens** → Generate a new token |
+| `REPLIT_REPL_ID` | The unique ID of the Replit project (repl) to deploy | Open the repl in Replit, then go to **Settings** → the ID is shown under "Repl ID", or extract it from the repl's URL: `https://replit.com/@<user>/<slug>` — the ID is also visible in the Replit API response for your repls |
+
+### How to add them
+
+1. Open your GitHub repository.
+2. Go to **Settings → Secrets and variables → Actions**.
+3. Click **New repository secret** for each of the two secrets above.
+4. Paste the value and save.
+
+Once both secrets are in place, any push to `main` that passes typecheck and lint will automatically trigger a deployment on Replit.
+
+---
+
 ## Architecture
 
 - **Contract-first API**: The OpenAPI spec (`lib/api-spec/openapi.yaml`) is the source of truth. Orval generates typed React Query hooks and Zod validators used on both client and server.
