@@ -25,6 +25,7 @@ import type {
   OpenaiConversationInput,
   OpenaiConversationWithMessages,
   OpenaiError,
+  OpenaiLetterInput,
   OpenaiMessage,
   OpenaiMessageInput
 } from './api.schemas';
@@ -412,6 +413,78 @@ export const useDeleteOpenaiConversation = <TError = ErrorType<OpenaiError>,
         TContext
       > => {
       return useMutation(getDeleteOpenaiConversationMutationOptions(options));
+    }
+
+export const getDraftOpenaiLetterUrl = (id: number,) => {
+
+
+
+
+  return `/api/openai/conversations/${id}/draft-letter`
+}
+
+/**
+ * @summary Draft a formal legal demand letter from a conversation
+ */
+export const draftOpenaiLetter = async (id: number,
+    openaiLetterInput: OpenaiLetterInput, options?: RequestInit): Promise<unknown> => {
+
+  return customFetch<unknown>(getDraftOpenaiLetterUrl(id),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    body: JSON.stringify(
+      openaiLetterInput,)
+  }
+);}
+
+
+
+
+export const getDraftOpenaiLetterMutationOptions = <TError = ErrorType<OpenaiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof draftOpenaiLetter>>, TError,{id: number;data: BodyType<OpenaiLetterInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof draftOpenaiLetter>>, TError,{id: number;data: BodyType<OpenaiLetterInput>}, TContext> => {
+
+const mutationKey = ['draftOpenaiLetter'];
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof draftOpenaiLetter>>, {id: number;data: BodyType<OpenaiLetterInput>}> = (props) => {
+          const {id,data} = props ?? {};
+
+          return  draftOpenaiLetter(id,data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type DraftOpenaiLetterMutationResult = NonNullable<Awaited<ReturnType<typeof draftOpenaiLetter>>>
+    export type DraftOpenaiLetterMutationBody = BodyType<OpenaiLetterInput>
+    export type DraftOpenaiLetterMutationError = ErrorType<OpenaiError>
+
+    /**
+ * @summary Draft a formal legal demand letter from a conversation
+ */
+export const useDraftOpenaiLetter = <TError = ErrorType<OpenaiError>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof draftOpenaiLetter>>, TError,{id: number;data: BodyType<OpenaiLetterInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof draftOpenaiLetter>>,
+        TError,
+        {id: number;data: BodyType<OpenaiLetterInput>},
+        TContext
+      > => {
+      return useMutation(getDraftOpenaiLetterMutationOptions(options));
     }
 
 export const getListOpenaiMessagesUrl = (id: number,) => {

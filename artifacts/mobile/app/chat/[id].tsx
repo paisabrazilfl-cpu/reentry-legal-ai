@@ -232,7 +232,14 @@ export default function ChatScreen() {
         <Text style={[styles.headerTitle, { color: colors.headerText }]} numberOfLines={1}>
           {conversation?.title ?? "Legal Advisor"}
         </Text>
-        <View style={styles.headerRight} />
+        <TouchableOpacity
+          onPress={() => router.push({ pathname: "/letter/[id]", params: { id: convId } })}
+          style={styles.letterBtn}
+          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+          testID="draft-letter-button"
+        >
+          <Feather name="file-text" size={20} color={colors.accent} />
+        </TouchableOpacity>
       </View>
 
       <KeyboardAvoidingView
@@ -329,7 +336,7 @@ const styles = StyleSheet.create({
     fontFamily: "Inter_600SemiBold",
     textAlign: "center",
   },
-  headerRight: { width: 36 },
+  letterBtn: { width: 36, alignItems: "center" },
   listContent: {
     paddingHorizontal: 16,
     paddingTop: 12,

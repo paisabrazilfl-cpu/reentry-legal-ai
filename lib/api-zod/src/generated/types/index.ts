@@ -11,5 +11,6 @@ export * from './openaiConversation';
 export * from './openaiConversationInput';
 export * from './openaiConversationWithMessages';
 export * from './openaiError';
+export * from './openaiLetterInput';
 export * from './openaiMessage';
 export * from './openaiMessageInput';

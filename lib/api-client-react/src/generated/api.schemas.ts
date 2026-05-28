@@ -38,6 +38,11 @@ export interface OpenaiConversationWithMessages {
   messages: OpenaiMessage[];
 }
 
+export interface OpenaiLetterInput {
+  reinforce?: boolean;
+  existingDraft?: string;
+}
+
 export interface OpenaiError {
   error: string;
 }

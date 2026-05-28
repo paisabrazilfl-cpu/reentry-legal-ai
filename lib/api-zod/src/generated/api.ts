@@ -66,6 +66,21 @@ export const DeleteOpenaiConversationParams = zod.object({
 
 
 /**
+ * @summary Draft a formal legal demand letter from a conversation
+ */
+export const DraftOpenaiLetterParams = zod.object({
+  "id": zod.coerce.number()
+})
+
+export const draftOpenaiLetterBodyReinforceDefault = false;
+
+export const DraftOpenaiLetterBody = zod.object({
+  "reinforce": zod.boolean().default(draftOpenaiLetterBodyReinforceDefault),
+  "existingDraft": zod.string().optional()
+})
+
+
+/**
  * @summary List messages in a conversation
  */
 export const ListOpenaiMessagesParams = zod.object({

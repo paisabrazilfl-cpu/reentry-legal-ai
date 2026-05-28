@@ -5,6 +5,7 @@ import { openai } from "@workspace/integrations-openai-ai-server";
 import {
   CreateOpenaiConversationBody,
   SendOpenaiMessageBody,
+  DraftOpenaiLetterBody,
 } from "@workspace/api-zod";
 
 const router = Router();
@@ -265,6 +266,142 @@ router.post("/conversations/:id/messages", async (req, res) => {
     req.log.error({ err }, "Failed to send message");
     if (!res.headersSent) {
       res.status(500).json({ error: "Failed to send message" });
+    } else {
+      res.write(`data: ${JSON.stringify({ error: "Stream error" })}\n\n`);
+      res.end();
+    }
+  }
+});
+
+const LETTER_SYSTEM_PROMPT = `You are a legal demand letter specialist. Your job is to draft formal, firm, and uncompromising legal demand letters on behalf of people in reentry programs asserting their rights against institutions, agencies, officials, and reentry facilities.
+
+TONE REQUIREMENTS:
+- Firm, professional, and authoritative — the tone of a seasoned civil rights attorney
+- Commanding urgency: the recipient must act NOW or face serious legal consequences
+- Zero ambiguity: state the violation, state the law, state the remedy demanded, state the deadline
+- Convey clearly: "We are prepared to use the FULL SCOPE of available legal remedies if this is not resolved immediately"
+- Do NOT soften language — this is a demand, not a request
+- Do NOT apologize or hedge
+
+LETTER STRUCTURE (always follow this format):
+
+[Date]
+
+[Recipient Name/Title]
+[Organization/Facility]
+[Address if known, otherwise use "Address on File"]
+
+Re: FORMAL LEGAL DEMAND — [Subject of Issue] — IMMEDIATE ACTION REQUIRED
+
+Dear [Recipient Title/Name]:
+
+**I. INTRODUCTION AND STANDING**
+Identify the sender, their legal standing, and the nature of this letter as a formal legal demand.
+
+**II. STATEMENT OF FACTS**
+A precise, numbered recitation of the factual violations — what happened, when, and how it violates the law.
+
+**III. APPLICABLE LAW AND VIOLATIONS**
+Cite every applicable statute, regulation, constitutional provision, and BOP/DOC policy that has been violated. Be specific — include statute numbers, section references, and policy statement numbers.
+
+**IV. DEMANDED RELIEF**
+Numbered list of specific, concrete remedies demanded. Be explicit and measurable.
+
+**V. NOTICE OF LEGAL CONSEQUENCES**
+State clearly that failure to comply by the stated deadline will result in:
+- Filing of administrative remedies (BP-8 through BP-11, or state grievance)
+- Civil rights complaints (42 U.S.C. § 1983, or equivalent)
+- Referral to legal counsel for immediate litigation
+- Notification to oversight bodies (DOJ, Inspector General, state oversight)
+- All available legal remedies will be pursued without limitation
+
+**VI. DEADLINE FOR RESPONSE**
+State a firm deadline (typically 10-14 business days for non-emergency, 48-72 hours for urgent matters).
+
+**VII. CLOSING**
+Professional closing asserting the sender's commitment to enforcement.
+
+Sincerely,
+[Sender Name]
+[Address / Contact if safe to share]
+
+cc: [Relevant oversight body, attorney if applicable]
+
+---
+REINFORCEMENT INSTRUCTIONS (when reinforcing):
+If you are reinforcing an existing draft, make it MORE aggressive — sharpen every legal argument, strengthen the threatened consequences, add additional legal citations, tighten the deadline, and make the consequences of non-compliance even more explicit. The letter should escalate meaningfully from the original.`;
+
+router.post("/conversations/:id/draft-letter", async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const body = DraftOpenaiLetterBody.parse(req.body);
+
+    const [conversation] = await db
+      .select()
+      .from(conversationsTable)
+      .where(eq(conversationsTable.id, id));
+    if (!conversation) {
+      res.status(404).json({ error: "Conversation not found" });
+      return;
+    }
+
+    const history = await db
+      .select()
+      .from(messagesTable)
+      .where(eq(messagesTable.conversationId, id))
+      .orderBy(messagesTable.createdAt);
+
+    const conversationSummary = history
+      .map((m) => `${m.role.toUpperCase()}: ${m.content}`)
+      .join("\n\n");
+
+    let userPrompt: string;
+    if (body.reinforce && body.existingDraft) {
+      userPrompt = `You previously drafted the following legal demand letter based on a conversation. The user wants you to REINFORCE and STRENGTHEN this letter — escalate the tone, sharpen the legal arguments, add more citations, tighten the deadline, and make the consequences of non-compliance even more explicit and severe.
+
+EXISTING DRAFT TO REINFORCE:
+${body.existingDraft}
+
+ORIGINAL CONVERSATION CONTEXT:
+${conversationSummary}
+
+Draft a reinforced, stronger version of this letter now. Make it significantly more forceful and legally aggressive.`;
+    } else {
+      userPrompt = `Based on the following conversation about a legal issue, draft a formal legal demand letter. Extract the key facts, violations, and desired outcomes from the conversation to create a powerful, firm, professional demand letter that leaves no doubt that the sender is prepared to use the full scope of the law.
+
+CONVERSATION:
+${conversationSummary}
+
+Draft the formal legal demand letter now. Make it firm, authoritative, and leave no question that legal action WILL follow if demands are not met.`;
+    }
+
+    res.setHeader("Content-Type", "text/event-stream");
+    res.setHeader("Cache-Control", "no-cache");
+    res.setHeader("Connection", "keep-alive");
+
+    const stream = await openai.chat.completions.create({
+      model: "gpt-5.4",
+      max_completion_tokens: 4096,
+      messages: [
+        { role: "system", content: LETTER_SYSTEM_PROMPT },
+        { role: "user", content: userPrompt },
+      ],
+      stream: true,
+    });
+
+    for await (const chunk of stream) {
+      const content = chunk.choices[0]?.delta?.content;
+      if (content) {
+        res.write(`data: ${JSON.stringify({ content })}\n\n`);
+      }
+    }
+
+    res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
+    res.end();
+  } catch (err) {
+    req.log.error({ err }, "Failed to draft letter");
+    if (!res.headersSent) {
+      res.status(500).json({ error: "Failed to draft letter" });
     } else {
       res.write(`data: ${JSON.stringify({ error: "Stream error" })}\n\n`);
       res.end();
