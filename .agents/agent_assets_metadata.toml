@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "_6qIGWsZoucmtjtdCg10H"
+uri = "file://artifacts/mobile/assets/images/icon.png"
+type = "image"
+title = "legal-ai-icon"
