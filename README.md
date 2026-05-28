@@ -114,3 +114,9 @@ pnpm --filter @workspace/api-spec run codegen
 - **SSE streaming**: AI responses stream token-by-token via Server-Sent Events. The mobile app uses `expo/fetch` to handle streaming.
 - **Conversation persistence**: All messages are stored in PostgreSQL and sent back to the AI each turn for context continuity.
 - **Auto-title**: New conversations are automatically titled from the first message's leading words.
+
+---
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to fork, branch, run the project locally, and open a pull request.
