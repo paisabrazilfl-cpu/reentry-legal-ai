@@ -10,6 +10,8 @@ import {
 
 const router = Router();
 
+const CHAT_MODEL = process.env.AI_CHAT_MODEL ?? "gpt-5.4";
+
 const LEGAL_SYSTEM_PROMPT = `You are a specialized legal AI assistant for people in reentry programs, particularly those involved with the Kentucky Department of Corrections and the federal Bureau of Prisons. Your role is to help users understand their rights, find legal remedies, cross-reference applicable laws, and build compelling arguments for their situation.
 
 You have detailed knowledge of the following documents and frameworks:
@@ -230,7 +232,7 @@ router.post("/conversations/:id/messages", async (req, res) => {
 
     let fullResponse = "";
     const stream = await openai.chat.completions.create({
-      model: "gpt-5.4",
+      model: CHAT_MODEL,
       max_completion_tokens: 8192,
       messages: chatMessages,
       stream: true,
@@ -380,7 +382,7 @@ Draft the formal legal demand letter now. Make it firm, authoritative, and leave
     res.setHeader("Connection", "keep-alive");
 
     const stream = await openai.chat.completions.create({
-      model: "gpt-5.4",
+      model: CHAT_MODEL,
       max_completion_tokens: 4096,
       messages: [
         { role: "system", content: LETTER_SYSTEM_PROMPT },

@@ -1,0 +1,31 @@
+TOKEN =Ew5aLLCE5kTUOTVKDHWV 
+MAIN CHAT:
+Qwen3-235B
+curl -v --location 'https://api-inference.bitdeer.ai/v1/chat/completions' --data '{"model":"Qwen/Qwen3-235B-A22B","messages":[{"role":"system","content":"You are a knowledgeable assistant. Provide concise and clear explanations to scientific questions."},{"role":"user","content":"Can you explain the theory of evolution in simple terms?"}],"max_tokens":1024,"temperature":1,"frequency_penalty":0,"presence_penalty":0,"top_p":1,"stream":false}' --header 'Authorization: Bearer <API_KEY>'
+
+
+CHEAP BACKUP:
+OpenAI gpt-oss-20b
+curl -v --location 'https://api-inference.bitdeer.ai/v1/chat/completions' --data '{"model":"openai/gpt-oss-20b","messages":[{"role":"system","content":"You are a knowledgeable assistant. Provide concise and clear explanations to scientific questions."},{"role":"user","content":"Can you explain the theory of evolution in simple terms?"}],"max_tokens":1024,"temperature":1,"frequency_penalty":0,"presence_penalty":0,"top_p":1,"stream":false}' --header 'Authorization: Bearer <API_KEY>'
+
+CODE:
+Mistral Devstral-2
+curl -v --location 'https://api-inference.bitdeer.ai/v1/chat/completions' --data '{"model":"mistralai/Devstral-2-123B-Instruct-2512","messages":[{"role":"system","content":"You are a knowledgeable assistant. Provide concise and clear explanations to scientific questions."},{"role":"user","content":"Can you explain the theory of evolution in simple terms?"}],"max_tokens":1024,"temperature":1,"frequency_penalty":0,"presence_penalty":0,"top_p":1,"stream":false}' --header 'Authorization: Bearer <API_KEY>'
+
+
+HARD CODE:
+Qwen3-Coder-Plus
+curl -v --location 'https://api-inference.bitdeer.ai/v1/chat/completions' --data '{"model":"Qwen/Qwen3-Coder-Plus","messages":[{"role":"system","content":"You are a knowledgeable assistant. Provide concise and clear explanations to scientific questions."},{"role":"user","content":"Can you explain the theory of evolution in simple terms?"}],"max_tokens":1024,"temperature":1,"frequency_penalty":0,"presence_penalty":0,"top_p":1,"stream":false}' --header 'Authorization: Bearer <API_KEY>'
+
+SHELL:
+Mistral Devstral-2
+curl -v --location 'https://api-inference.bitdeer.ai/v1/chat/completions' --data '{"model":"mistralai/Devstral-2-123B-Instruct-2512","messages":[{"role":"system","content":"You are a knowledgeable assistant. Provide concise and clear explanations to scientific questions."},{"role":"user","content":"Can you explain the theory of evolution in simple terms?"}],"max_tokens":1024,"temperature":1,"frequency_penalty":0,"presence_penalty":0,"top_p":1,"stream":false}' --header 'Authorization: Bearer <API_KEY>' 
+
+VISION:
+Qwen3-235B
+curl -v --location 'https://api-inference.bitdeer.ai/v1/chat/completions' --data '{"model":"Qwen/Qwen3-235B-A22B","messages":[{"role":"system","content":"You are a knowledgeable assistant. Provide concise and clear explanations to scientific questions."},{"role":"user","content":"Can you explain the theory of evolution in simple terms?"}],"max_tokens":1024,"temperature":1,"frequency_penalty":0,"presence_penalty":0,"top_p":1,"stream":false}' --header 'Authorization: Bearer <API_KEY>' 
+
+MEMORY:
+BAAI bge-m3 + bge-reranker-v2-m3
+curl --location 'https://api-inference.bitdeer.ai/v1/rerank' --data '{"model":"BAAI/bge-reranker-v2-m3","query":"What is the capital of France?","documents":["The capital of Brazil is Brasilia.","The capital of France is Paris.","Horses and cows are both animals"],"top_n":2}' --header 'Authorization: Bearer <API_KEY>'
+curl -v --location 'https://api-inference.bitdeer.ai/v1/embeddings' --data '{"model":"BAAI/bge-m3","input":"The cat danced gracefully under the moonlight, its shadow twirling like a silent partner."}' --header 'Authorization: Bearer <API_KEY>'
