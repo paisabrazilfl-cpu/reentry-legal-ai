@@ -1,6 +1,9 @@
 import express, { type Express } from "express";
 import cors from "cors";
 import pinoHttp from "pino-http";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
@@ -30,5 +33,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);
+
+// Single-service production deploy: serve the built web client from the API
+// server. In Replit dev the web runs as its own artifact, so this block is a
+// no-op there (no built client sits next to the server bundle).
+const moduleDir = path.dirname(fileURLToPath(import.meta.url));
+const webDist = process.env.WEB_DIST_PATH
+  ? path.resolve(process.env.WEB_DIST_PATH)
+  : path.join(moduleDir, "public");
+
+if (fs.existsSync(path.join(webDist, "index.html"))) {
+  app.use(express.static(webDist));
+  app.use((req, res, next) => {
+    if (req.method !== "GET" || req.path.startsWith("/api")) {
+      next();
+      return;
+    }
+    res.sendFile(path.join(webDist, "index.html"));
+  });
+  logger.info({ webDist }, "Serving static web client");
+}
 
 export default app;

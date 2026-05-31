@@ -1,0 +1,33 @@
+databases:
+  - name: reentry-legal-ai-db
+    databaseName: reentry
+    user: reentry
+    plan: basic-256mb
+
+services:
+  - type: web
+    name: reentry-legal-ai
+    runtime: node
+    plan: starter
+    repo: https://github.com/paisabrazilfl-cpu/reentry-legal-ai
+    branch: main
+    autoDeploy: true
+    buildCommand: |
+      corepack enable
+      pnpm install --frozen-lockfile
+      pnpm --filter @workspace/web run build
+      pnpm --filter @workspace/api-server run build
+      rm -rf artifacts/api-server/dist/public
+      cp -r artifacts/web/dist/public artifacts/api-server/dist/public
+    startCommand: node --enable-source-maps artifacts/api-server/dist/index.mjs
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AI_CHAT_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: reentry-legal-ai-db
+          property: connectionString

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { eq } from "drizzle-orm";
 import { db, conversations as conversationsTable, messages as messagesTable } from "@workspace/db";
-import { openai } from "@workspace/integrations-openai-ai-server";
+import { ai } from "../../lib/gemini";
 import {
   CreateOpenaiConversationBody,
   SendOpenaiMessageBody,
@@ -10,7 +10,7 @@ import {
 
 const router = Router();
 
-const CHAT_MODEL = process.env.AI_CHAT_MODEL ?? "gpt-5.4";
+const CHAT_MODEL = process.env.AI_CHAT_MODEL ?? "gemini-2.5-flash";
 
 const LEGAL_SYSTEM_PROMPT = `You are a specialized legal AI assistant for people in reentry programs, particularly those involved with the Kentucky Department of Corrections and the federal Bureau of Prisons. Your role is to help users understand their rights, find legal remedies, cross-reference applicable laws, and build compelling arguments for their situation.
 
@@ -218,28 +218,27 @@ router.post("/conversations/:id/messages", async (req, res) => {
       .where(eq(messagesTable.conversationId, id))
       .orderBy(messagesTable.createdAt);
 
-    const chatMessages = [
-      { role: "system" as const, content: LEGAL_SYSTEM_PROMPT },
-      ...history.map((m) => ({
-        role: m.role as "user" | "assistant",
-        content: m.content,
-      })),
-    ];
+    const contents = history.map((m) => ({
+      role: m.role === "assistant" ? ("model" as const) : ("user" as const),
+      parts: [{ text: m.content }],
+    }));
 
     res.setHeader("Content-Type", "text/event-stream");
     res.setHeader("Cache-Control", "no-cache");
     res.setHeader("Connection", "keep-alive");
 
     let fullResponse = "";
-    const stream = await openai.chat.completions.create({
+    const stream = await ai.models.generateContentStream({
       model: CHAT_MODEL,
-      max_completion_tokens: 8192,
-      messages: chatMessages,
-      stream: true,
+      contents,
+      config: {
+        systemInstruction: LEGAL_SYSTEM_PROMPT,
+        maxOutputTokens: 8192,
+      },
     });
 
     for await (const chunk of stream) {
-      const content = chunk.choices[0]?.delta?.content;
+      const content = chunk.text;
       if (content) {
         fullResponse += content;
         res.write(`data: ${JSON.stringify({ content })}\n\n`);
@@ -381,18 +380,17 @@ Draft the formal legal demand letter now. Make it firm, authoritative, and leave
     res.setHeader("Cache-Control", "no-cache");
     res.setHeader("Connection", "keep-alive");
 
-    const stream = await openai.chat.completions.create({
+    const stream = await ai.models.generateContentStream({
       model: CHAT_MODEL,
-      max_completion_tokens: 4096,
-      messages: [
-        { role: "system", content: LETTER_SYSTEM_PROMPT },
-        { role: "user", content: userPrompt },
-      ],
-      stream: true,
+      contents: [{ role: "user", parts: [{ text: userPrompt }] }],
+      config: {
+        systemInstruction: LETTER_SYSTEM_PROMPT,
+        maxOutputTokens: 8192,
+      },
     });
 
     for await (const chunk of stream) {
-      const content = chunk.choices[0]?.delta?.content;
+      const content = chunk.text;
       if (content) {
         res.write(`data: ${JSON.stringify({ content })}\n\n`);
       }
