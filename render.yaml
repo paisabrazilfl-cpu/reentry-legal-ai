@@ -23,6 +23,10 @@ services:
       cp -r artifacts/web/dist/public artifacts/api-server/dist/public
     startCommand: node --enable-source-maps artifacts/api-server/dist/index.mjs
     envVars:
+      - key: PORT
+        value: 8080
+      - key: BASE_PATH
+        value: /
       - key: NODE_ENV
         value: production
       - key: AI_CHAT_MODEL
