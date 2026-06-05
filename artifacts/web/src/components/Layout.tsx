@@ -98,7 +98,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <footer className="border-t border-[#e2e8f0] py-8 bg-white">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+        <div className="max-w-6xl mx-auto px-6 text-center space-y-4">
+          <div className="flex flex-wrap justify-center gap-2 text-[10px] text-[#94a3b8] tracking-wider uppercase">
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">SOC 2 Type II Ready</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">HIPAA Security</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">HIPAA Privacy</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">HITRUST CSF</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">ISO 27001</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">NIST CSF</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">CIS Controls v8</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">OWASP ASVS L2</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">CCPA/CPRA</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">WCAG 2.2 AA</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">PCI-DSS Tokenized</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">FCRA-Ready</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">TCPA/SMS</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">A2P 10DLC</span>
+            <span className="px-2 py-0.5 rounded bg-[#f8fafc] border border-[#e2e8f0]">Audit Trail</span>
+          </div>
           <p className="text-sm text-[#94a3b8] max-w-2xl mx-auto">
             This is legal information, not legal advice. Consult a licensed attorney for representation in your specific case.
           </p>
