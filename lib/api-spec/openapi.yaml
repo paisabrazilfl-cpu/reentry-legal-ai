@@ -183,6 +183,8 @@ components:
       properties:
         id:
           type: integer
+        userId:
+          type: string
         title:
           type: string
         createdAt:
@@ -190,6 +192,7 @@ components:
           format: date-time
       required:
         - id
+        - userId
         - title
         - createdAt
     OpenaiMessage:
@@ -231,6 +234,8 @@ components:
       properties:
         id:
           type: integer
+        userId:
+          type: string
         title:
           type: string
         createdAt:
@@ -242,6 +247,7 @@ components:
             $ref: "#/components/schemas/OpenaiMessage"
       required:
         - id
+        - userId
         - title
         - createdAt
         - messages

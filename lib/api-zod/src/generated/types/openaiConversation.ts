@@ -8,6 +8,7 @@
 
 export interface OpenaiConversation {
   id: number;
+  userId: string;
   title: string;
   createdAt: Date;
 }

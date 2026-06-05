@@ -1,20 +1,26 @@
 import { useCallback, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
+import { useAuth } from "@clerk/react";
 import { getGetOpenaiConversationQueryKey, getListOpenaiConversationsQueryKey } from "@workspace/api-client-react";
 
 export function useChatStream(conversationId: number) {
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamingContent, setStreamingContent] = useState("");
   const queryClient = useQueryClient();
+  const { getToken } = useAuth();
 
   const streamMessage = useCallback(async (content: string) => {
     setIsStreaming(true);
     setStreamingContent("");
 
     try {
+      const token = await getToken();
+      const headers: Record<string, string> = { "Content-Type": "application/json" };
+      if (token) headers["Authorization"] = `Bearer ${token}`;
+
       const resp = await fetch(`/api/openai/conversations/${conversationId}/messages`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({ content }),
       });
 
@@ -31,7 +37,7 @@ export function useChatStream(conversationId: number) {
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
-        
+
         buffer += decoder.decode(value, { stream: true });
         const lines = buffer.split("\n");
         buffer = lines.pop() ?? "";
@@ -59,16 +65,20 @@ export function useChatStream(conversationId: number) {
       queryClient.invalidateQueries({ queryKey: getGetOpenaiConversationQueryKey(conversationId) });
       queryClient.invalidateQueries({ queryKey: getListOpenaiConversationsQueryKey() });
     }
-  }, [conversationId, queryClient]);
+  }, [conversationId, queryClient, getToken]);
 
   const draftLetter = useCallback(async (reinforce?: boolean, existingDraft?: string) => {
     setIsStreaming(true);
     setStreamingContent("");
 
     try {
+      const token = await getToken();
+      const headers: Record<string, string> = { "Content-Type": "application/json" };
+      if (token) headers["Authorization"] = `Bearer ${token}`;
+
       const resp = await fetch(`/api/openai/conversations/${conversationId}/draft-letter`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({ reinforce, existingDraft }),
       });
 
@@ -85,7 +95,7 @@ export function useChatStream(conversationId: number) {
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
-        
+
         buffer += decoder.decode(value, { stream: true });
         const lines = buffer.split("\n");
         buffer = lines.pop() ?? "";
@@ -111,7 +121,7 @@ export function useChatStream(conversationId: number) {
       setStreamingContent("");
       queryClient.invalidateQueries({ queryKey: getGetOpenaiConversationQueryKey(conversationId) });
     }
-  }, [conversationId, queryClient]);
+  }, [conversationId, queryClient, getToken]);
 
   return { streamMessage, draftLetter, isStreaming, streamingContent };
 }

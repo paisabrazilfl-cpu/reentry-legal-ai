@@ -1,0 +1,172 @@
+==================================================
+PLAYWRIGHT IMAGE / VISUAL CONTENT VALIDATION
+==================================================
+
+Use Playwright to inspect every major page visually and confirm that all pictures, icons, illustrations, backgrounds, hero images, cards, and visual assets make sense for the page context.
+
+This website is for rideshare sexual abuse / assault survivor resources, so imagery must be survivor-safe, respectful, professional, non-graphic, and non-exploitative.
+
+Validate images on at least these pages:
+- /
+- /confidential-case-review
+- /survivor-resources
+- /rideshare-sexual-abuse
+- /rideshare-sexual-assault
+- /legal-options-after-rideshare-assault
+- /mass-tort-information
+- /faq
+- /contact
+- /privacy-policy
+- /disclaimer
+
+For every image or visual asset, check:
+
+1. CONTEXT FIT
+- Image matches the page topic.
+- Image supports survivor trust, safety, privacy, or legal-resource education.
+- Image does not look random, generic, misleading, or emotionally inappropriate.
+- Image does not conflict with the page headline or CTA.
+- Hero image makes sense for the page purpose.
+- Resource-card images/icons match their category.
+
+2. SURVIVOR-SAFE VISUAL RULES
+Do not use:
+- Graphic sexualized imagery.
+- Images implying blame, shame, fear, or helplessness.
+- Disturbing assault imagery.
+- Injured-person shock imagery.
+- Dark crime-scene visuals.
+- Aggressive police/jail imagery unless specifically educational and handled carefully.
+- Fake courtroom drama imagery.
+- Fake attorney/team photos.
+- Fake survivor photos presented as real.
+- Stock photos that feel exploitative, staged, or manipulative.
+- Overly happy stock photos that trivialize trauma.
+
+Prefer:
+- Calm abstract visuals.
+- Privacy/safety imagery.
+- Soft professional gradients.
+- Neutral transportation/rideshare imagery.
+- Phone/app/trip-record visuals.
+- Supportive resource imagery.
+- Professional legal/intake visuals.
+- Non-identifiable silhouettes.
+- Icons for documentation, privacy, safety, contact, FAQs, and legal options.
+- Trustworthy but non-sensational visuals.
+
+3. QUALITY CHECKS
+- No pixelated images.
+- No stretched images.
+- No distorted aspect ratios.
+- No cropped faces or awkward framing.
+- No image overflow.
+- No broken images.
+- No missing assets.
+- No huge uncompressed images.
+- No low-quality AI artifacts.
+- No mismatched lighting/style between repeated card images.
+- No text baked into images unless necessary and readable.
+- No visual clutter.
+
+4. RESPONSIVE IMAGE CHECKS
+At each required viewport:
+- 360x800
+- 390x844
+- 430x932
+- 768x1024
+- 820x1180
+- 1024x768
+- 1280x720
+- 1366x768
+- 1440x900
+- 1920x1080
+
+Confirm:
+- Hero images scale correctly.
+- Card images scale correctly.
+- Background images do not crop important content.
+- Image overlays keep text readable.
+- Mobile images do not dominate the screen.
+- Desktop images do not look stretched or empty.
+- Tablet images do not break layout.
+- No horizontal scrolling caused by images.
+- Images maintain aspect ratio.
+- Images have appropriate object-fit/object-position.
+- Lazy-loaded images appear correctly after scroll.
+
+5. ACCESSIBILITY / SEO IMAGE CHECKS
+For every meaningful image:
+- Add descriptive alt text.
+- Alt text must be page-specific and useful.
+- Decorative images should use empty alt text or proper decorative handling.
+- Image filenames should be descriptive where practical.
+- Important visuals should not be the only place important text appears.
+- Text over images must pass readability/contrast expectations.
+- Do not hide important SEO content inside images.
+
+6. PERFORMANCE CHECKS
+- Compress large images.
+- Use modern formats where supported.
+- Use responsive srcset/sizes or framework image optimization where available.
+- Add width/height or equivalent layout sizing.
+- Lazy-load non-critical images.
+- Do not lazy-load the main LCP hero image if it damages performance.
+- Avoid autoplay videos or heavy animated backgrounds.
+- Remove unused images.
+
+7. PLAYWRIGHT VISUAL INSPECTION PROCEDURE
+During Playwright validation:
+
+For each tested page:
+- Load the page.
+- Wait for network idle or stable render.
+- Take desktop screenshot.
+- Take tablet screenshot.
+- Take mobile screenshot.
+- Inspect all img elements.
+- Check naturalWidth and naturalHeight are greater than 0.
+- Check rendered image dimensions are not 0.
+- Check image is visible when expected.
+- Check image does not overflow viewport.
+- Check alt attributes.
+- Check background-image sections visually.
+- Check console/network for failed image loads.
+- Scroll the full page and verify lazy images load.
+
+If a visual asset fails:
+- Identify the image/component.
+- Replace it, remove it, or adjust it.
+- Patch image sizing/CSS.
+- Add or correct alt text.
+- Re-run Playwright.
+- Repeat up to 3 correction loops.
+
+8. IMAGE VALIDATION REPORT
+Final report must include:
+- Pages visually checked.
+- Screenshot viewport list.
+- Broken images found/fixed.
+- Inappropriate images found/fixed.
+- Images replaced or removed.
+- Alt text improvements.
+- Performance improvements.
+- Remaining visual blockers, if any.
+
+==================================================
+FINAL IMAGE QUALITY BAR
+==================================================
+
+No random images.
+No exploitative images.
+No graphic trauma imagery.
+No fake attorney/team photos.
+No broken images.
+No stretched images.
+No pixelated images.
+No unreadable image overlays.
+No missing alt text on meaningful images.
+No image-caused mobile breakage.
+No skipped Playwright visual inspection.
+
+All visuals must make sense for a premium, survivor-safe, rideshare sexual abuse resource and intake website.

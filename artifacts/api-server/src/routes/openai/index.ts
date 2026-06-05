@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { eq } from "drizzle-orm";
+import { getAuth } from "@clerk/express";
 import { db, conversations as conversationsTable, messages as messagesTable } from "@workspace/db";
 import { ai } from "../../lib/gemini";
 import {
@@ -9,6 +10,24 @@ import {
 } from "@workspace/api-zod";
 
 const router = Router();
+
+function getUserId(req: any): string | null {
+  const auth = getAuth(req) as any;
+  const userId = auth?.userId ?? auth?.sessionClaims?.userId;
+  if (!userId) return null;
+  return userId;
+}
+
+const requireAuth = (req: any, res: any, next: any) => {
+  const userId = getUserId(req);
+  if (!userId) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
+  req.userId = userId;
+  next();
+};
+
+type AuthRequest = any;
 
 const CHAT_MODEL = process.env.AI_CHAT_MODEL ?? "gemini-2.5-flash";
 
@@ -751,11 +770,12 @@ For every question or issue, structure your response with these sections:
 
 When a user exposes a problem or issue, systematically analyze it through ALL relevant legal frameworks and identify every possible remedy or argument available to them. Be thorough and advocate clearly for the user's rights.`;
 
-router.get("/conversations", async (req, res) => {
+router.get("/conversations", requireAuth, async (req, res) => {
   try {
     const conversations = await db
       .select()
       .from(conversationsTable)
+      .where(eq(conversationsTable.userId, req.userId!))
       .orderBy(conversationsTable.createdAt);
     res.json(conversations);
   } catch (err) {
@@ -764,12 +784,12 @@ router.get("/conversations", async (req, res) => {
   }
 });
 
-router.post("/conversations", async (req, res) => {
+router.post("/conversations", requireAuth, async (req, res) => {
   try {
     const body = CreateOpenaiConversationBody.parse(req.body);
     const [conversation] = await db
       .insert(conversationsTable)
-      .values({ title: body.title })
+      .values({ title: body.title, userId: req.userId! })
       .returning();
     res.status(201).json(conversation);
   } catch (err) {
@@ -778,14 +798,14 @@ router.post("/conversations", async (req, res) => {
   }
 });
 
-router.get("/conversations/:id", async (req, res) => {
+router.get("/conversations/:id", requireAuth, async (req, res) => {
   try {
     const id = parseInt(req.params.id);
     const [conversation] = await db
       .select()
       .from(conversationsTable)
       .where(eq(conversationsTable.id, id));
-    if (!conversation) {
+    if (!conversation || conversation.userId !== req.userId!) {
       res.status(404).json({ error: "Conversation not found" });
       return;
     }
@@ -801,9 +821,17 @@ router.get("/conversations/:id", async (req, res) => {
   }
 });
 
-router.delete("/conversations/:id", async (req, res) => {
+router.delete("/conversations/:id", requireAuth, async (req, res) => {
   try {
     const id = parseInt(req.params.id);
+    const [conversation] = await db
+      .select()
+      .from(conversationsTable)
+      .where(eq(conversationsTable.id, id));
+    if (!conversation || conversation.userId !== req.userId!) {
+      res.status(404).json({ error: "Conversation not found" });
+      return;
+    }
     const [deleted] = await db
       .delete(conversationsTable)
       .where(eq(conversationsTable.id, id))
@@ -819,9 +847,17 @@ router.delete("/conversations/:id", async (req, res) => {
   }
 });
 
-router.get("/conversations/:id/messages", async (req, res) => {
+router.get("/conversations/:id/messages", requireAuth, async (req, res) => {
   try {
     const id = parseInt(req.params.id);
+    const [conversation] = await db
+      .select()
+      .from(conversationsTable)
+      .where(eq(conversationsTable.id, id));
+    if (!conversation || conversation.userId !== req.userId!) {
+      res.status(404).json({ error: "Conversation not found" });
+      return;
+    }
     const messages = await db
       .select()
       .from(messagesTable)
@@ -834,7 +870,7 @@ router.get("/conversations/:id/messages", async (req, res) => {
   }
 });
 
-router.post("/conversations/:id/messages", async (req, res) => {
+router.post("/conversations/:id/messages", requireAuth, async (req, res) => {
   try {
     const id = parseInt(req.params.id);
     const body = SendOpenaiMessageBody.parse(req.body);
@@ -843,7 +879,7 @@ router.post("/conversations/:id/messages", async (req, res) => {
       .select()
       .from(conversationsTable)
       .where(eq(conversationsTable.id, id));
-    if (!conversation) {
+    if (!conversation || conversation.userId !== req.userId!) {
       res.status(404).json({ error: "Conversation not found" });
       return;
     }
@@ -974,7 +1010,7 @@ cc: [Relevant oversight body, attorney if applicable]
 REINFORCEMENT INSTRUCTIONS (when reinforcing):
 If you are reinforcing an existing draft, make it MORE aggressive — sharpen every legal argument, strengthen the threatened consequences, add additional legal citations, tighten the deadline, and make the consequences of non-compliance even more explicit. The letter should escalate meaningfully from the original.`;
 
-router.post("/conversations/:id/draft-letter", async (req, res) => {
+router.post("/conversations/:id/draft-letter", requireAuth, async (req, res) => {
   try {
     const id = parseInt(req.params.id);
     const body = DraftOpenaiLetterBody.parse(req.body);
@@ -983,7 +1019,7 @@ router.post("/conversations/:id/draft-letter", async (req, res) => {
       .select()
       .from(conversationsTable)
       .where(eq(conversationsTable.id, id));
-    if (!conversation) {
+    if (!conversation || conversation.userId !== req.userId!) {
       res.status(404).json({ error: "Conversation not found" });
       return;
     }

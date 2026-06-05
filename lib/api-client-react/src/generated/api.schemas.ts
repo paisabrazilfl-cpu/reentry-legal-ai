@@ -11,6 +11,7 @@ export interface HealthStatus {
 
 export interface OpenaiConversation {
   id: number;
+  userId: string;
   title: string;
   createdAt: string;
 }
@@ -33,6 +34,7 @@ export interface OpenaiMessageInput {
 
 export interface OpenaiConversationWithMessages {
   id: number;
+  userId: string;
   title: string;
   createdAt: string;
   messages: OpenaiMessage[];

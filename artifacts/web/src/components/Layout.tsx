@@ -1,10 +1,13 @@
 import { Link, useLocation } from "wouter";
-import { Scale, MessageSquare, History, BookOpen, MapPin } from "lucide-react";
+import { useAuth, SignOutButton } from "@clerk/react";
+import { Scale, MessageSquare, History, BookOpen, MapPin, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
+  const { isSignedIn } = useAuth();
   const isHome = location === "/" || location.startsWith("/chat/");
+  const isAuthPage = location.startsWith("/sign-in") || location.startsWith("/sign-up");
 
   const navItems = [
     { href: "/", label: "Ask", icon: MessageSquare },
@@ -36,7 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <span className="font-bold text-lg tracking-tight">ReEntry Legal AI</span>
           </Link>
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-1 flex-1">
             {navItems.map((item) => {
               const isActive = location === item.href || (location.startsWith("/chat/") && item.href === "/");
               return (
@@ -60,6 +63,35 @@ export function Layout({ children }: { children: React.ReactNode }) {
               );
             })}
           </nav>
+          <div className="flex items-center gap-3">
+            {isSignedIn ? (
+              <SignOutButton redirectUrl="/">
+                <button className={cn(
+                  "flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-200",
+                  isHome
+                    ? "text-white/70 hover:text-white hover:bg-white/10"
+                    : "text-[#64748b] hover:text-[#0f172a] hover:bg-[#f1f5f9]"
+                )}>
+                  <LogOut className="h-4 w-4" />
+                  <span className="hidden sm:inline">Sign out</span>
+                </button>
+              </SignOutButton>
+            ) : (
+              !isAuthPage && (
+                <Link
+                  href="/sign-in"
+                  className={cn(
+                    "flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-full transition-all duration-200",
+                    isHome
+                      ? "bg-white/20 text-white hover:bg-white/30"
+                      : "bg-[#0f172a] text-white hover:bg-[#1e293b]"
+                  )}
+                >
+                  Sign in
+                </Link>
+              )
+            )}
+          </div>
         </div>
       </header>
       <main className="flex-1">
