@@ -123,33 +123,31 @@ export default function StateGuidePage() {
   }, [search]);
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
+    <div className="max-w-6xl mx-auto px-6 py-12 space-y-8">
       {/* Header */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-primary tracking-tight">
-          50 State Reentry Guide
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <div className="mb-10">
+        <h1 className="text-4xl font-bold text-[#0f172a] mb-2">50 State Reentry Guide</h1>
+        <p className="text-[#64748b] max-w-2xl">
           Reentry statutes, parole rules, voting rights, and expungement information for every state.
         </p>
       </div>
 
       {/* Search */}
       <div className="relative max-w-md mx-auto">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#94a3b8]" />
         <Input
           placeholder="Search by state name, code, or statute..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="pl-10"
+          className="pl-10 border-[#e2e8f0] rounded-xl focus-visible:ring-[#0f172a]"
         />
       </div>
 
       {/* Count badge */}
       <div className="text-center">
-        <Badge variant="secondary" className="text-sm">
+        <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f8fafc] border border-[#e2e8f0] text-sm text-[#64748b]">
           {filtered.length} of {ALL_STATES.length} states
-        </Badge>
+        </span>
       </div>
 
       {/* State Grid */}
@@ -157,26 +155,26 @@ export default function StateGuidePage() {
         {filtered.map((state) => (
           <Card
             key={state.code}
-            className="cursor-pointer hover:border-primary/50 transition-all hover:shadow-md group"
+            className="cursor-pointer hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group border-[#e2e8f0] rounded-2xl"
             onClick={() => setSelectedState(state)}
           >
             <CardHeader className="p-4 pb-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-sm group-hover:bg-primary/20 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-[#0f172a] flex items-center justify-center text-white font-bold text-sm group-hover:bg-[#1e293b] transition-colors">
                     {state.code}
                   </div>
                   <div>
-                    <CardTitle className="text-base">{state.name}</CardTitle>
-                    <p className="text-xs text-muted-foreground line-clamp-1">{state.statutes}</p>
+                    <CardTitle className="text-base text-[#0f172a]">{state.name}</CardTitle>
+                    <p className="text-xs text-[#94a3b8] line-clamp-1">{state.statutes}</p>
                   </div>
                 </div>
               </div>
             </CardHeader>
             <CardContent className="p-4 pt-2">
               <div className="flex flex-wrap gap-1">
-                <Badge variant="outline" className="text-xs">{state.votingRights.split(";")[0].trim()}</Badge>
-                <Badge variant="outline" className="text-xs">{state.expungement.split(";")[0].trim()}</Badge>
+                <span className="inline-flex items-center px-2 py-0.5 rounded-md border border-[#e2e8f0] text-xs text-[#64748b]">{state.votingRights.split(";")[0].trim()}</span>
+                <span className="inline-flex items-center px-2 py-0.5 rounded-md border border-[#e2e8f0] text-xs text-[#64748b]">{state.expungement.split(";")[0].trim()}</span>
               </div>
             </CardContent>
           </Card>
@@ -190,23 +188,23 @@ export default function StateGuidePage() {
           onClick={() => setSelectedState(null)}
         >
           <div
-            className="bg-background rounded-xl border shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden flex flex-col"
+            className="bg-white rounded-2xl border border-[#e2e8f0] shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="p-6 border-b bg-muted/30 flex items-center justify-between">
+            <div className="p-6 border-b border-[#e2e8f0] bg-[#f8fafc] flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
+                <div className="w-12 h-12 rounded-xl bg-[#0f172a] flex items-center justify-center text-white font-bold text-lg">
                   {selectedState.code}
                 </div>
                 <div>
-                  <h2 className="text-2xl font-serif font-bold">{selectedState.name}</h2>
-                  <p className="text-sm text-muted-foreground">{selectedState.statutes}</p>
+                  <h2 className="text-2xl font-bold text-[#0f172a]">{selectedState.name}</h2>
+                  <p className="text-sm text-[#94a3b8]">{selectedState.statutes}</p>
                 </div>
               </div>
               <button
                 onClick={() => setSelectedState(null)}
-                className="text-muted-foreground hover:text-foreground text-2xl leading-none"
+                className="text-[#94a3b8] hover:text-[#0f172a] text-2xl leading-none transition-colors"
               >
                 &times;
               </button>
@@ -233,12 +231,12 @@ export default function StateGuidePage() {
                   const value = selectedState[key];
                   return (
                     <div key={key} className="flex gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                        <Icon className="h-5 w-5 text-primary" />
+                      <div className="w-10 h-10 rounded-lg bg-[#f8fafc] flex items-center justify-center shrink-0">
+                        <Icon className="h-5 w-5 text-[#0f172a]" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-sm text-foreground mb-1">{label}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{value}</p>
+                        <h3 className="font-semibold text-sm text-[#0f172a] mb-1">{label}</h3>
+                        <p className="text-sm text-[#64748b] leading-relaxed">{value}</p>
                       </div>
                     </div>
                   );
@@ -247,9 +245,9 @@ export default function StateGuidePage() {
             </ScrollArea>
 
             {/* Modal Footer */}
-            <div className="p-4 border-t bg-muted/30 flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-muted-foreground" />
-              <p className="text-xs text-muted-foreground">
+            <div className="p-4 border-t border-[#e2e8f0] bg-[#f8fafc] flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-[#94a3b8]" />
+              <p className="text-xs text-[#94a3b8]">
                 This is legal information, not legal advice. Consult a licensed attorney for specific guidance.
               </p>
             </div>
