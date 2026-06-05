@@ -10,7 +10,7 @@ services:
     runtime: node
     plan: starter
     repo: https://github.com/paisabrazilfl-cpu/reentry-legal-ai
-    branch: main
+    branch: clerk-auth-per-user-2026-06-05
     autoDeploy: true
     buildCommand: |
       export PORT=8080
