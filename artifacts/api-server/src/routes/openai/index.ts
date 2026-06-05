@@ -43,6 +43,73 @@ Federal Bureau of Prisons reentry guide covering:
 ### Dismas Charities
 Private nonprofit operating Residential Reentry Centers (RRCs/halfway houses) under contract with the BOP and state corrections systems. Operates under BOP Program Statement requirements and their own facility rules.
 
+### Dismas Charities Rules
+- **Employment**: Required within 5-7 days of arrival; job search documentation; community service requirements
+- **Contraband**: Zero-tolerance; mandatory searches; prohibited items; visitor screening
+- **Pass/Furlough**: Level system (Level 1-4); weekend passes; home visits; sign-out procedures; curfew enforcement
+- **Drug Testing**: Random testing; initial intake screening; reasonable suspicion; mandatory after absences
+- **Financial Obligations**: Weekly subsistence fees; restitution; child support; payment plans
+- **Discharge Criteria**: Completion of program; gainful employment; stable housing; no violations for 90 days
+- **Reporting**: Daily check-in; electronic monitoring; telephone reporting; home visits
+- **Residents' Rights**: Grievance procedures; access to counsel; non-discrimination; religious accommodation; due process in disciplinary proceedings
+- **Violations**: Tier 1 (minor), Tier 2 (moderate), Tier 3 (serious); graduated sanctions; appeals process
+- **Length of Stay**: Typically 90-180 days; extension requests; early discharge for good behavior
+
+### GEO Group (Private Prison) Rules
+GEO Group operates private correctional facilities and immigration detention centers under contract with BOP, ICE, and state agencies.
+- **Contract Standards**: Performance-based contracts; cost per inmate; accreditation requirements
+- **Medical Care**: Intake health screening; chronic care; mental health; suicide prevention; medical grievances
+- **Security**: Use of force continuum; incident reporting; video documentation; staff training requirements
+- **Visitation**: Legal visits; family visits; video visitation; attorney access; confidential mail
+- **Programming**: GED programs; substance abuse treatment; job training; vocational programs
+- **Grievances**: Formal complaint process; deadlines; appeal rights; retaliation protections
+- **Discipline**: Due process hearings; progressive sanctions; disciplinary segregation; appeal procedures
+- **Food Service**: Nutritional standards; religious dietary accommodation; special medical diets
+- **Commissary**: Inmate accounts; purchase limits; price controls; family deposits
+- **Detention Centers**: ICE holds; transfer procedures; bond hearings; legal orientation programs
+- **Arizona State Prison Complex**: Kingman, Florence; state contract; security classification; visitation schedules
+- **Federal Correctional Institution**: Contract with BOP; security levels; programming requirements
+
+### ICE (Immigration and Customs Enforcement) Deportation Rules
+- **Detention**: Mandatory detention under 8 U.S.C. § 1226; mandatory detention under 8 U.S.C. § 1226c; discretionary detention; bond hearings
+- **Bond**: Eligibility under INA § 236; bond hearings; minimum bond amount; bond procedures; bond revocation
+- **Removal Proceedings**: Notice to Appear (NTA); Master Calendar; Individual Hearing; final orders; appeals
+- **Relief from Removal**: Cancellation of removal; asylum; withholding of removal; CAT (Convention Against Torture); TPS; DACA; adjustment of status; U visa
+- **Criminal Immigration**: Aggravated felony; crime involving moral turpitude (CIMT); drug offenses; firearms offenses; domestic violence; DUI consequences
+- **Voluntary Departure**: Eligibility under INA § 240B; time limits; consequences of failure to depart
+- **Expedited Removal**: Port-of-entry; 5-year bar; 20-year bar; asylum screening
+- **Reinstatement of Removal**: Prior removal orders; reentry after removal; criminal penalties
+- **Prosecutorial Discretion**: Deferred Action; prosecutorial discretion memos; ICE priorities; detention guidelines
+- **Detention Standards**: ICE Performance-Based National Detention Standards; medical care; mental health; legal access; phone calls; visitation; recreation
+- **Detention Facilities**: Service Processing Centers; Contract Detention Facilities; County jails; ICE-owned facilities
+- **Parole**: ICE Parole (humanitarian); parole under 8 U.S.C. § 1182; medical parole; parole for witnesses
+- **Legal Representation**: Right to counsel (not government-funded); legal orientation programs; pro bono programs; know-your-rights materials
+- **Family Separation**: Reunification; expedited processing; special juvenile procedures; best interest determinations
+- **Deportation Consequences**: 10-year bar; 20-year bar; permanent bar; waivers; hardship requirements
+- **Post-Removal**: Reentry after removal; criminal penalties; prior removal; adjustment of status
+- **ICE Workplace Enforcement**: I-9 audits; E-Verify; worksite raids; employer penalties; worker rights
+- **ICE and Criminal Justice**: ICE holds; detainers; 287(g) agreements; Secure Communities; Priority Enforcement Program; Sensitive Locations Policy
+- **Criminal History Impact**: Single CIMT vs. multiple; sentence of 1+ year; 30/60/90-day rule; petty offense exception
+- **Immigration Consequences of Pleas**: Padilla v. Kentucky (2010); ineffective assistance of counsel; duty to advise; collateral consequences
+
+### Workers Compensation
+- **Coverage**: State-by-state coverage requirements; employer obligations; exemptions; independent contractors; gig workers
+- **Benefits**: Medical treatment; temporary disability; permanent disability; vocational rehabilitation; death benefits; lump sum settlements
+- **Filing Claims**: Notice requirements; deadlines (statute of limitations); claim forms; medical authorization; employer notification
+- **Dispute Resolution**: Hearings; appeals; administrative law judges; state boards; mediation; arbitration
+- **Retaliation**: Anti-retaliation statutes; whistleblower protections; wrongful termination; reinstatement
+- **Occupational Diseases**: Long-term exposure; repetitive stress; hearing loss; respiratory conditions; chemical exposure; pre-existing conditions
+- **Return to Work**: Light duty; modified duty; vocational rehabilitation; job retraining; permanent restrictions; maximum medical improvement
+- **Denial of Claims**: Reasons for denial; appeals process; independent medical exams; second opinions; medical records review
+- **Pre-Existing Conditions**: Aggravation; apportionment; cumulative injury; medical causation; independent medical examination
+- **Third-Party Claims**: Subrogation; employer immunity; third-party negligence; dual recovery; lien rights
+- **Federal Programs**: Federal Employees' Compensation Act (FECA); Longshore and Harbor Workers' Compensation Act; Defense Base Act; Black Lung Benefits Act; Energy Employees Occupational Illness Compensation Program
+- **Social Security**: SSDI; SSI; offset provisions; workers' comp and Social Security interaction; Medicare Set-Asides
+- **Settlement**: Lump sum; structured settlements; Medicare compliance; future medical; closing medical
+- **Employer Fraud**: Misclassification; failure to carry insurance; premium fraud; underreporting; penalties
+- **Death Benefits**: Dependency; funeral expenses; weekly benefits; lump sum; life expectancy calculations; multiple beneficiaries
+- **State Variations**: Monopolistic states (ND, OH, WA, WY); competitive states; private insurers; state funds; self-insurance; experience rating
+
 ## LEGAL FRAMEWORK
 
 ### Federal Law
@@ -69,6 +136,582 @@ Private nonprofit operating Residential Reentry Centers (RRCs/halfway houses) un
 - **KRS 439.3401**: Violent offender requirements
 - **KRS 532.080**: Persistent felony offender
 - **CPP 30.1-30.7**: Kentucky DOC Policies governing programs, credit, assessments
+
+### State-by-State Reentry Laws (All 50 States)
+
+For any state-specific question, identify the relevant statutes, policies, and procedural rules.
+
+#### ALABAMA
+- **Ala. Code § 15-22-1 through § 15-22-55**: Reentry statutes; Parole Board authority; supervision requirements
+- **Alabama Board of Pardons and Paroles**: Parole guidelines; risk assessment; violation procedures
+- **Certificate of Rehabilitation**: Limited rights restoration; employment licensing
+- **Voting Rights**: Felony disenfranchisement; restoration after completion of sentence
+- **Alabama DOC**: Substance abuse programs; GED programs; vocational training; reentry courts
+- **Halfway Houses**: Contract facilities; community corrections; work release
+- **Probation**: Judicial supervision; violation hearings; revocation procedures
+- **Good Time**: Sentence reduction credits; work credits; educational credits
+- **Housing**: Sex offender restrictions; public housing restrictions; local ordinances
+- **Employment**: Ban the Box (Executive Order); occupational licensing; expungement
+- **Expungement**: Limited expungement; pardons
+
+#### ALASKA
+- **AS 33.30**: Parole and probation statutes; revocation procedures; good time calculations
+- **AS 33.30.241**: Probation and parole; conditions; modification; revocation
+- **AS 33.30.291**: Good time; deductions; forfeiture; restoration
+- **Alaska DOC**: Reentry programs; substance abuse treatment; educational programs
+- **Probation**: Supervised, unsupervised, intensive supervision; electronic monitoring
+- **Parole**: Discretionary, mandatory; parole hearings; conditions
+- **Reentry Programs**: Alaska Reentry Coalition; transitional housing; employment services
+- **Housing**: Transitional housing; supportive housing; homelessness prevention
+- **Employment**: State, private, self-employment; licensing restrictions
+- **Voting Rights**: Restoration upon completion of sentence; automatic restoration
+- **Expungement**: Sealing records; pardons
+- **Native Rights**: Tribal jurisdiction; tribal reentry; ANCSA
+- **Remote Communities**: Rural reentry; transportation; subsistence rights
+- **Legal Aid**: Alaska Legal Services Corporation; pro bono services
+
+#### ARIZONA
+- **A.R.S. § 13-901**: Probation; conditions; modification; revocation; termination
+- **A.R.S. § 31-233**: Earned release credits; work credits; educational credits
+- **Arizona DOC**: Rehabilitation; education; substance abuse; reentry programs
+- **Arizona Board of Executive Clemency**: Parole; commutation; pardon; reprieve
+- **Reentry Programs**: Substance abuse; education; vocational training; job readiness
+- **Housing**: Transitional housing; sober housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; expungement
+- **Voting Rights**: Restoration after first felony; two-time felons require court application
+- **Expungement**: Set Aside; limited sealing; pardons
+
+#### ARKANSAS
+- **Ark. Code Ann. § 16-93-1201**: Reentry statutes; parole; probation
+- **Arkansas Board of Parole**: Parole guidelines; hearings; conditions
+- **Arkansas DOC**: Reentry programs; substance abuse; education; vocational training
+- **Good Time**: Earned release credits; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; electronic monitoring; drug testing
+- **Housing**: Transitional housing; halfway houses; sex offender restrictions
+- **Employment**: Ban the Box; occupational licensing; certificate of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Sealing records; pardons
+
+#### CALIFORNIA
+- **Cal. Penal Code § 3000 et seq.**: Parole and probation statutes
+- **Cal. Penal Code § 5058**: CDCR authority; programs; credits
+- **California DOC and Rehabilitation (CDCR)**: Rehabilitation; education; substance abuse; reentry
+- **California Board of Parole Hearings**: Parole suitability; conditions; violations
+- **Earned Release Credits**: Milestone credits; rehabilitative achievement credits; good conduct credits
+- **Proposition 57**: Nonviolent parole eligibility; good conduct credits; youth parole
+- **Proposition 47**: Reclassification of certain felonies to misdemeanors; resentencing
+- **Proposition 64**: Marijuana legalization; resentencing; record clearance
+- **Realignment (AB 109)**: County jail for nonviolent felonies; split sentences; mandatory supervision
+- **Probation**: Formal, informal; PRCS (Post-Release Community Supervision); probation camps
+- **Housing**: Transitional housing; sober housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; record clearing; expungement
+- **Voting Rights**: Restoration upon completion of sentence; automatic
+- **Expungement**: Penal Code 1203.4; record sealing; certificates of rehabilitation; pardons
+- **Legal Aid**: Public defender; legal aid; law school clinics; pro bono
+
+#### COLORADO
+- **C.R.S. § 17-22.5-101**: Parole and probation; earned time; good time
+- **Colorado DOC**: Reentry programs; substance abuse; education; vocational training
+- **Colorado Board of Parole**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; homeless assistance
+- **Employment**: Ban the Box; occupational licensing; certificate of employability
+- **Voting Rights**: Restoration upon completion of sentence; automatic
+- **Expungement**: Sealing records; pardons; record clearing
+
+#### CONNECTICUT
+- **Conn. Gen. Stat. § 18-100 et seq.**: Parole and probation; earned release
+- **Connecticut DOC**: Reentry programs; substance abuse; education; vocational training
+- **Connecticut Board of Pardons and Paroles**: Parole hearings; conditions; pardons
+- **Good Time**: Risk reduction credits; earned credits; program credits
+- **Probation**: Supervised, unsupervised; special probation; drug testing
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Absolute pardon; conditional pardon; record sealing
+
+#### DELAWARE
+- **11 Del. Code § 4321**: Parole and probation; good time; earned time
+- **Delaware DOC**: Reentry programs; substance abuse; education; vocational training
+- **Delaware Board of Parole**: Parole hearings; conditions; violations
+- **Good Time**: Good conduct time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement
+
+#### FLORIDA
+- **Fla. Stat. § 947.01**: Parole and probation; conditional release; control release
+- **Florida DOC**: Reentry programs; substance abuse; education; vocational training
+- **Florida Commission on Offender Review**: Parole hearings; conditions; violations
+- **Good Time**: Gain time; incentive gain time; meritorious time
+- **Probation**: Supervised, administrative; community control; house arrest; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box (some counties); occupational licensing; restoration of civil rights
+- **Voting Rights**: Restoration of civil rights; clemency; automatic for some felonies
+- **Expungement**: Sealing records; expungement; clemency; pardons
+
+#### GEORGIA
+- **O.C.G.A. § 42-9-1**: Parole and probation; earned time; good time
+- **Georgia DOC**: Reentry programs; substance abuse; education; vocational training
+- **Georgia Board of Pardons and Paroles**: Parole hearings; conditions; pardons
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record restriction; pardons; record sealing
+
+#### HAWAII
+- **HRS § 353-61**: Parole and probation; earned time; good time
+- **Hawaii DOC**: Reentry programs; substance abuse; education; vocational training
+- **Hawaii Paroling Authority**: Parole hearings; conditions; violations
+- **Good Time**: Good time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Expungement; pardons; record sealing
+
+#### IDAHO
+- **Idaho Code § 20-101**: Parole and probation; earned time; good time
+- **Idaho DOC**: Reentry programs; substance abuse; education; vocational training
+- **Idaho Commission of Pardons and Parole**: Parole hearings; conditions; pardons
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement
+
+#### ILLINOIS
+- **730 ILCS 5/3-3-1**: Parole and probation; mandatory supervised release; good time
+- **Illinois DOC**: Reentry programs; substance abuse; education; vocational training
+- **Prisoner Review Board**: Parole hearings; conditions; violations; pardons
+- **Good Time**: Sentence credit; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; conditional discharge; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Sealing records; expungement; pardons; certificates of employability
+
+#### INDIANA
+- **IC § 11-8-1-1**: Parole and probation; earned time; good time
+- **Indiana DOC**: Reentry programs; substance abuse; education; vocational training
+- **Indiana Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned credit; good time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### IOWA
+- **Iowa Code § 906.1**: Parole and probation; earned time; good time
+- **Iowa DOC**: Reentry programs; substance abuse; education; vocational training
+- **Iowa Board of Parole**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement
+
+#### KANSAS
+- **K.S.A. § 75-5201**: Parole and probation; good time; earned time
+- **Kansas DOC**: Reentry programs; substance abuse; education; vocational training
+- **Kansas Prisoner Review Board**: Parole hearings; conditions; violations
+- **Good Time**: Good time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### KENTUCKY
+- **KRS 197.045**: Sentence credit for program completion (90 days for Evidence Based programs)
+- **KRS 439.345**: Parole eligibility and requirements
+- **KRS 439.3401**: Violent offender requirements
+- **KRS 532.080**: Persistent felony offender
+- **Kentucky DOC**: Reentry programs; substance abuse; education; vocational training
+- **Kentucky Parole Board**: Parole hearings; conditions; violations
+- **CPP 30.1-30.7**: DOC Policies governing programs, credit, assessments
+- **Good Time**: Sentence credit; program credit; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### LOUISIANA
+- **La. Rev. Stat. § 15:574.1**: Parole and probation; earned time; good time
+- **Louisiana DOC**: Reentry programs; substance abuse; education; vocational training
+- **Louisiana Board of Pardons and Committee on Parole**: Parole hearings; conditions; pardons
+- **Good Time**: Good time; meritorious time; educational credits; trusty time
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; first offender pardon
+
+#### MAINE
+- **15-A M.R.S. § 2301**: Parole and probation; earned time; good time
+- **Maine DOC**: Reentry programs; substance abuse; education; vocational training
+- **Maine Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Good time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; intensive supervision; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Never disenfranchised; voting while incarcerated
+- **Expungement**: Record sealing; pardons; expungement
+
+#### MARYLAND
+- **Md. Code, Corr. Servs. § 7-301**: Parole and probation; earned time; good time
+- **Maryland DOC**: Reentry programs; substance abuse; education; vocational training
+- **Maryland Parole Commission**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons; shielding
+
+#### MASSACHUSETTS
+- **MGL c.127, § 1**: Parole and probation; earned time; good time
+- **Massachusetts DOC**: Reentry programs; substance abuse; education; vocational training
+- **Massachusetts Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### MICHIGAN
+- **MCL § 791.201**: Parole and probation; earned time; good time
+- **Michigan DOC**: Reentry programs; substance abuse; education; vocational training
+- **Michigan Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits; disciplinary credit
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; Clean Slate; automatic expungement
+
+#### MINNESOTA
+- **Minn. Stat. § 244.01**: Parole and probation; earned time; good time
+- **Minnesota DOC**: Reentry programs; substance abuse; education; vocational training
+- **Minnesota Board of Pardons**: Parole; commutation; pardon; reprieve
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### MISSISSIPPI
+- **Miss. Code Ann. § 47-7-1**: Parole and probation; earned time; good time
+- **Mississippi DOC**: Reentry programs; substance abuse; education; vocational training
+- **Mississippi Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits; trusty time
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Disenfranchisement for some felonies; restoration after completion of sentence; clemency
+- **Expungement**: Record sealing; expungement; pardons
+
+#### MISSOURI
+- **RSMo § 217.010**: Parole and probation; earned time; good time
+- **Missouri DOC**: Reentry programs; substance abuse; education; vocational training
+- **Missouri Board of Probation and Parole**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### MONTANA
+- **MCA § 46-23-101**: Parole and probation; earned time; good time
+- **Montana DOC**: Reentry programs; substance abuse; education; vocational training
+- **Montana Board of Pardons and Parole**: Parole hearings; conditions; pardons
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### NEBRASKA
+- **Neb. Rev. Stat. § 83-1,100**: Parole and probation; earned time; good time
+- **Nebraska DOC**: Reentry programs; substance abuse; education; vocational training
+- **Nebraska Board of Parole**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; set aside
+
+#### NEVADA
+- **NRS § 213.010**: Parole and probation; earned time; good time
+- **Nevada DOC**: Reentry programs; substance abuse; education; vocational training
+- **Nevada Board of Parole Commissioners**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement
+
+#### NEW HAMPSHIRE
+- **RSA 651-A:1**: Parole and probation; earned time; good time
+- **New Hampshire DOC**: Reentry programs; substance abuse; education; vocational training
+- **New Hampshire Adult Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Annulment; record sealing; pardons
+
+#### NEW JERSEY
+- **N.J.S.A. 30:4-123.1**: Parole and probation; earned time; good time
+- **New Jersey DOC**: Reentry programs; substance abuse; education; vocational training
+- **New Jersey State Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits; commutation credits
+- **Probation**: Supervised, unsupervised; community corrections; special probation; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; clean slate; pardons
+
+#### NEW MEXICO
+- **NMSA 1978, § 31-21-10**: Parole and probation; earned time; good time
+- **New Mexico DOC**: Reentry programs; substance abuse; education; vocational training
+- **New Mexico Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### NEW YORK
+- **N.Y. Correct. Law § 1**: Correction Law; reentry programs; earned time
+- **N.Y. Penal Law § 60.01**: Sentencing; probation; conditional discharge
+- **N.Y. Exec. Law § 259**: Parole; parole board; conditions; violations
+- **New York DOC and Community Supervision (DOCCS)**: Reentry programs; substance abuse; education; vocational training
+- **New York State Board of Parole**: Parole hearings; conditions; violations
+- **Good Time**: Merit time; good time; educational credits; work release
+- **Probation**: Supervised, unsupervised; conditional discharge; electronic monitoring; TASC
+- **Housing**: Transitional housing; supportive housing; emergency shelters; homeless shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; restoration of licenses
+- **Voting Rights**: Restoration after completion of sentence; automatic; voting while on parole/probation
+- **Expungement**: Record sealing; certificate of good conduct; certificate of relief from disabilities; pardons
+- **Legal Aid**: Public defender; legal aid; law school clinics; pro bono; reentry legal services
+
+#### NORTH CAROLINA
+- **N.C. Gen. Stat. § 15A-1341**: Probation; conditions; modification; revocation
+- **N.C. Gen. Stat. § 15A-1371**: Parole; conditions; violations; post-release supervision
+- **North Carolina DOC**: Reentry programs; substance abuse; education; vocational training
+- **North Carolina Post-Release Supervision and Parole Commission**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; intensive supervision
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; certificates of relief; pardons
+
+#### NORTH DAKOTA
+- **N.D. Cent. Code § 12-59.1-01**: Parole and probation; earned time; good time
+- **North Dakota DOC**: Reentry programs; substance abuse; education; vocational training
+- **North Dakota Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement
+
+#### OHIO
+- **Ohio Rev. Code § 2967.01**: Parole and probation; earned time; good time
+- **Ohio DOC**: Reentry programs; substance abuse; education; vocational training
+- **Ohio Adult Parole Authority**: Parole hearings; conditions; violations; pardons
+- **Good Time**: Earned time; meritorious time; educational credits; reintegration credits
+- **Probation**: Supervised, unsupervised; community control; intensive probation; electronic monitoring; halfway house
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; record sealing
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; certificates of qualification for employment; pardons
+
+#### OKLAHOMA
+- **Okla. Stat. tit. 57, § 1**: Parole and probation; earned time; good time
+- **Oklahoma DOC**: Reentry programs; substance abuse; education; vocational training
+- **Oklahoma Pardon and Parole Board**: Parole hearings; conditions; pardons; commutations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons; commutations
+
+#### OREGON
+- **ORS § 144.010**: Parole and probation; earned time; good time
+- **Oregon DOC**: Reentry programs; substance abuse; education; vocational training
+- **Oregon Board of Parole and Post-Prison Supervision**: Parole hearings; conditions; violations; post-prison supervision
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; intensive supervision
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons; set aside
+
+#### PENNSYLVANIA
+- **61 Pa. C.S. § 6101**: Parole and probation; earned time; good time
+- **Pennsylvania DOC**: Reentry programs; substance abuse; education; vocational training
+- **Pennsylvania Board of Probation and Parole**: Parole hearings; conditions; violations; special probation
+- **Good Time**: Earned time; meritorious time; educational credits; reentry credits
+- **Probation**: Supervised, unsupervised; county probation; intermediate punishment; electronic monitoring; GPS
+- **Housing**: Transitional housing; supportive housing; emergency shelters; sober houses
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; pardons board
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; limited access; pardons; Clean Slate
+
+#### RHODE ISLAND
+- **R.I. Gen. Laws § 13-8-1**: Parole and probation; earned time; good time
+- **Rhode Island DOC**: Reentry programs; substance abuse; education; vocational training
+- **Rhode Island Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons
+
+#### SOUTH CAROLINA
+- **S.C. Code § 24-21-10**: Parole and probation; earned time; good time
+- **South Carolina DOC**: Reentry programs; substance abuse; education; vocational training
+- **South Carolina Department of Probation, Parole and Pardon Services**: Parole hearings; conditions; violations; pardons
+- **Good Time**: Earned time; meritorious time; educational credits; work credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; GPS
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; pardons
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons; youthful offender
+
+#### SOUTH DAKOTA
+- **S.D. Codified Laws § 24-14-1**: Parole and probation; earned time; good time
+- **South Dakota DOC**: Reentry programs; substance abuse; education; vocational training
+- **South Dakota Board of Pardons and Paroles**: Parole hearings; conditions; pardons
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement
+
+#### TENNESSEE
+- **Tenn. Code Ann. § 40-28-101**: Parole and probation; earned time; good time
+- **Tennessee DOC**: Reentry programs; substance abuse; education; vocational training
+- **Tennessee Board of Parole**: Parole hearings; conditions; violations; pardons
+- **Good Time**: Earned time; meritorious time; educational credits; trusty time
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; intensive supervision
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; expungement
+- **Voting Rights**: Restoration after completion of sentence; automatic; payment of restitution
+- **Expungement**: Record sealing; expungement; pardons; certificate of employability
+
+#### TEXAS
+- **Tex. Gov. Code § 508.001**: Parole and probation; mandatory supervision; earned time
+- **Texas DOC**: Reentry programs; substance abuse; education; vocational training; Windham School
+- **Texas Board of Pardons and Paroles**: Parole hearings; conditions; violations; pardons; commutations
+- **Good Time**: Earned time; good conduct time; meritorious time; educational credits; trusty time
+- **Probation**: Supervised, unsupervised; deferred adjudication; community supervision; electronic monitoring; GPS; drug testing
+- **Housing**: Transitional housing; supportive housing; emergency shelters; halfway houses
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; restoration of licenses
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Expunction; nondisclosure; orders of nondisclosure; pardons; commutations
+
+#### UTAH
+- **Utah Code § 76-3-201**: Sentencing; probation; parole; earned time
+- **Utah DOC**: Reentry programs; substance abuse; education; vocational training
+- **Utah Board of Pardons and Parole**: Parole hearings; conditions; violations; pardons; commutations
+- **Good Time**: Earned time; meritorious time; educational credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; intensive supervision
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; expungement; pardons; certificates of rehabilitation
+
+#### VERMONT
+- **13 V.S.A. § 5301**: Parole and probation; earned time; good time
+- **Vermont DOC**: Reentry programs; substance abuse; education; vocational training
+- **Vermont Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits; disciplinary credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; furlough
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Never disenfranchised; voting while incarcerated
+- **Expungement**: Record sealing; expungement; pardons; diversion
+
+#### VIRGINIA
+- **Va. Code § 53.1-1**: Parole and probation; earned time; good time
+- **Virginia DOC**: Reentry programs; substance abuse; education; vocational training
+- **Virginia Parole Board**: Parole hearings; conditions; violations; geriatric parole
+- **Good Time**: Earned sentence credits; good conduct credits; educational credits; work credits
+- **Probation**: Supervised, unsupervised; community corrections; intensive supervision; electronic monitoring; drug testing
+- **Housing**: Transitional housing; supportive housing; emergency shelters; housing vouchers
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; restoration of licenses
+- **Voting Rights**: Restoration after completion of sentence; automatic; governor's clemency for some
+- **Expungement**: Record sealing; expungement; pardons; simple marijuana possession
+
+#### WASHINGTON
+- **RCW 9.95.010**: Parole and probation; earned time; good time
+- **Washington DOC**: Reentry programs; substance abuse; education; vocational training
+- **Washington State Indeterminate Sentence Review Board**: Parole hearings; conditions; violations; pardons
+- **Good Time**: Earned time; meritorious time; educational credits; work credits; educational release
+- **Probation**: Supervised, unsupervised; community custody; community corrections; electronic monitoring; drug testing
+- **Housing**: Transitional housing; supportive housing; emergency shelters; rapid rehousing
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; restoration of licenses
+- **Voting Rights**: Restoration after completion of sentence; automatic; voting while incarcerated for some
+- **Expungement**: Record sealing; vacating conviction; pardons; certificates of discharge
+
+#### WEST VIRGINIA
+- **W. Va. Code § 62-12-1**: Probation; conditions; modification; revocation
+- **W. Va. Code § 62-12-13**: Parole; conditions; violations; good time
+- **West Virginia DOC**: Reentry programs; substance abuse; education; vocational training
+- **West Virginia Parole Board**: Parole hearings; conditions; violations
+- **Good Time**: Earned time; meritorious time; educational credits; work credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; intensive supervision
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic; petition for restoration
+- **Expungement**: Record sealing; expungement; pardons; certificates of rehabilitation
+
+#### WISCONSIN
+- **Wis. Stat. § 302.11**: Parole and probation; earned time; good time; mandatory release
+- **Wisconsin DOC**: Reentry programs; substance abuse; education; vocational training
+- **Wisconsin Division of Hearings and Appeals**: Parole hearings; conditions; violations; extended supervision
+- **Good Time**: Earned time; meritorious time; educational credits; positive adjustment time
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; GPS; drug testing
+- **Housing**: Transitional housing; supportive housing; emergency shelters; halfway houses
+- **Employment**: Ban the Box; occupational licensing; certificates of employability; restoration of licenses
+- **Voting Rights**: Restoration after completion of sentence; automatic; voting while incarcerated for some
+- **Expungement**: Expungement; pardons; record sealing; certificate of rehabilitation
+
+#### WYOMING
+- **Wyo. Stat. § 7-13-401**: Parole and probation; earned time; good time
+- **Wyoming DOC**: Reentry programs; substance abuse; education; vocational training
+- **Wyoming Board of Parole**: Parole hearings; conditions; violations; pardons
+- **Good Time**: Earned time; meritorious time; educational credits; work credits
+- **Probation**: Supervised, unsupervised; community corrections; electronic monitoring; intensive supervision
+- **Housing**: Transitional housing; supportive housing; emergency shelters
+- **Employment**: Ban the Box; occupational licensing; certificates of employability
+- **Voting Rights**: Restoration after completion of sentence; automatic
+- **Expungement**: Record sealing; pardons; expungement; certificates of employability
 
 ### BOP Policies (Program Statements)
 - **PS 5100.08**: Security Designation and Custody Classification Manual
