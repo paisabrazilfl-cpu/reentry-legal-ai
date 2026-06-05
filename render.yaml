@@ -13,14 +13,7 @@ services:
     branch: clerk-auth-per-user-2026-06-05
     autoDeploy: true
     buildCommand: |
-      export PORT=8080
-      export BASE_PATH=/
-      corepack enable
-      pnpm install --frozen-lockfile
-      pnpm --filter @workspace/web run build
-      pnpm --filter @workspace/api-server run build
-      rm -rf artifacts/api-server/dist/public
-      cp -r artifacts/web/dist/public artifacts/api-server/dist/public
+      export PORT=8080 && export BASE_PATH=/ && corepack enable && pnpm install --frozen-lockfile && pnpm --filter @workspace/web run build && pnpm --filter @workspace/api-server run build && rm -rf artifacts/api-server/dist/public && cp -r artifacts/web/dist/public artifacts/api-server/dist/public
     startCommand: node --enable-source-maps artifacts/api-server/dist/index.mjs
     envVars:
       - key: PORT
