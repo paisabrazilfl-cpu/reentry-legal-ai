@@ -33,3 +33,11 @@ services:
         fromDatabase:
           name: reentry-legal-ai-db
           property: connectionString
+      - key: CLERK_SECRET_KEY
+        sync: false
+      - key: CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: VITE_CLERK_PUBLISHABLE_KEY
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
