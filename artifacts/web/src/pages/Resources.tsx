@@ -28,6 +28,7 @@ const RESOURCES = [
       { label: "18 U.S.C. § 3624(c)", desc: "Pre-release custody: RRC & home confinement placement" },
       { label: "28 C.F.R. § 571", desc: "Compassionate release / reduction in sentence" },
       { label: "42 U.S.C. § 1983", desc: "Civil rights claims against state actors" },
+      { label: "OSHA (29 U.S.C. § 651)", desc: "Workplace safety protections, whistleblower protections, post-release employment safety" },
     ]
   },
   {
@@ -63,6 +64,37 @@ const RESOURCES = [
   },
   {
     id: "6",
+    title: "Earned Time Credits (ETC)",
+    items: [
+      { label: "First Step Act (2018)", desc: "Earned Time Credits (ETC) — up to 365 days reduction for eligible inmates" },
+      { label: "PATTERN Risk Assessment", desc: "BOP tool determining ETC eligibility (minimum/low risk = eligible)" },
+      { label: "ETC Application", desc: "Credits applied toward pre-release custody (RRC/home confinement) or sentence reduction" },
+      { label: "Eligible Programs", desc: "Educational, vocational, substance abuse treatment, and reentry programs" },
+      { label: "Ineligible Offenses", desc: "Certain violent, sex, terrorism, and deportable offenses may disqualify" },
+    ]
+  },
+  {
+    id: "7",
+    title: "OSHA / Workplace Safety",
+    items: [
+      { label: "29 U.S.C. § 651 (OSHA Act)", desc: "Right to safe workplace, hazard reporting, retaliation protections" },
+      { label: "OSHA 11(c)", desc: "Whistleblower protections — 30-day filing deadline for retaliation claims" },
+      { label: "Post-Release Employment", desc: "Temporary workers, construction, general industry safety standards" },
+      { label: "OSHA Complaint Process", desc: "File complaint online, by phone, or in person; right to inspection" },
+      { label: "State OSHA Plans", desc: "22 states operate their own OSHA programs with additional protections" },
+    ]
+  },
+  {
+    id: "8",
+    title: "50-State Reentry Guide",
+    items: [
+      { label: "All 50 States", desc: "Reentry statutes, parole rules, voting rights, and expungement information" },
+      { label: "Interactive Search", desc: "Search by state name, code, or statute to find relevant laws" },
+      { label: "Visit the Guide", desc: "Navigate to /50-states for the full interactive state-by-state guide" },
+    ]
+  },
+  {
+    id: "9",
     title: "Key Case Law",
     items: [
       { label: "Wolff v. McDonnell (1974)", desc: "Due process rights in disciplinary proceedings" },
@@ -73,7 +105,7 @@ const RESOURCES = [
     ]
   },
   {
-    id: "7",
+    id: "10",
     title: "Reentry Remedies",
     items: [
       { label: "Administrative Remedy", desc: "File BP-8 through BP-11 to exhaust BOP remedies" },

@@ -41,6 +41,7 @@ const RESOURCES: ResourceSection[] = [
       { label: "18 U.S.C. § 3624(c)", desc: "Pre-release custody: RRC & home confinement placement" },
       { label: "28 C.F.R. § 571", desc: "Compassionate release / reduction in sentence" },
       { label: "42 U.S.C. § 1983", desc: "Civil rights claims against state actors" },
+      { label: "OSHA (29 U.S.C. § 651)", desc: "Workplace safety protections, whistleblower protections, post-release employment safety" },
     ],
   },
   {
@@ -75,6 +76,40 @@ const RESOURCES: ResourceSection[] = [
       { label: "PORTAL New Direction", desc: "Reentry program for transitioning to the community" },
       { label: "GED / Adult Education", desc: "Education programs eligible for sentence credit" },
       { label: "Career & Technical", desc: "CDL, Culinary Arts, Materials Management" },
+    ],
+  },
+  {
+    title: "Earned Time Credits (ETC)",
+    icon: "clock",
+    color: "#8B5CF6",
+    items: [
+      { label: "First Step Act (2018)", desc: "ETC — up to 365 days reduction for eligible inmates" },
+      { label: "PATTERN Risk Assessment", desc: "BOP tool determining ETC eligibility (minimum/low risk)" },
+      { label: "ETC Application", desc: "Credits toward pre-release custody or sentence reduction" },
+      { label: "Eligible Programs", desc: "Educational, vocational, substance abuse, reentry programs" },
+      { label: "Ineligible Offenses", desc: "Certain violent, sex, terrorism, deportable offenses" },
+    ],
+  },
+  {
+    title: "OSHA / Workplace Safety",
+    icon: "hard-hat",
+    color: "#F59E0B",
+    items: [
+      { label: "29 U.S.C. § 651 (OSHA Act)", desc: "Right to safe workplace, hazard reporting, retaliation protections" },
+      { label: "OSHA 11(c)", desc: "Whistleblower protections — 30-day filing deadline" },
+      { label: "Post-Release Employment", desc: "Temporary workers, construction, general industry safety" },
+      { label: "OSHA Complaint", desc: "File online, by phone, or in person; right to inspection" },
+      { label: "State OSHA Plans", desc: "22 states operate their own OSHA programs" },
+    ],
+  },
+  {
+    title: "50-State Reentry Guide",
+    icon: "map",
+    color: "#10B981",
+    items: [
+      { label: "All 50 States", desc: "Reentry statutes, parole rules, voting rights, expungement" },
+      { label: "Interactive Search", desc: "Search by state name, code, or statute" },
+      { label: "Visit the Guide", desc: "Navigate to /50-states for the full guide" },
     ],
   },
   {

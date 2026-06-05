@@ -24,9 +24,19 @@ const QUICK_PROMPTS = [
     text: "I believe my constitutional rights are being violated. What can I do?",
   },
   {
+    icon: "clock" as const,
+    title: "Earned Time Credits",
+    text: "How do I apply First Step Act Earned Time Credits to reduce my sentence?",
+  },
+  {
     icon: "book-open" as const,
     title: "Program Credit",
     text: "How do I get sentence credit for completing programs in Kentucky DOC?",
+  },
+  {
+    icon: "hard-hat" as const,
+    title: "OSHA / Workplace Safety",
+    text: "My workplace is unsafe. What are my rights and how do I report violations?",
   },
   {
     icon: "home" as const,

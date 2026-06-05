@@ -14,9 +14,19 @@ const QUICK_PROMPTS = [
     icon: Scale,
   },
   {
+    title: "Earned Time Credits",
+    description: "How do I apply First Step Act Earned Time Credits to reduce my sentence?",
+    icon: FileText,
+  },
+  {
     title: "Program Credit",
     description: "How do I get sentence credit for completing programs in Kentucky DOC?",
     icon: FileText,
+  },
+  {
+    title: "OSHA / Workplace Safety",
+    description: "My workplace is unsafe. What are my rights and how do I report violations?",
+    icon: Briefcase,
   },
   {
     title: "Halfway House",
@@ -65,7 +75,7 @@ export default function AskPage() {
           Understand Your Legal Rights
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          A legal advisor providing guidance on Kentucky DOC programs, federal BOP rules, constitutional rights, and halfway-house policies.
+          A legal advisor providing guidance on Kentucky DOC programs, federal BOP rules, constitutional rights, OSHA workplace safety, Earned Time Credits, all 50 state reentry laws, and halfway-house policies.
         </p>
       </div>
 
