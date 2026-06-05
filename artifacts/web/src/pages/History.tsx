@@ -1,8 +1,8 @@
 import { useListOpenaiConversations, useDeleteOpenaiConversation, getListOpenaiConversationsQueryKey } from "@workspace/api-client-react";
 import { Link } from "wouter";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Trash2, MessageSquare } from "lucide-react";
+import { Trash2, MessageSquare, Clock } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQueryClient } from "@tanstack/react-query";
 import { useToast } from "@/hooks/use-toast";
@@ -14,9 +14,8 @@ export default function HistoryPage() {
   const { toast } = useToast();
 
   const handleDelete = async (e: React.MouseEvent, id: number) => {
-    e.preventDefault(); // Prevent link click
+    e.preventDefault();
     if (!confirm("Are you sure you want to delete this conversation?")) return;
-    
     try {
       await deleteMutation.mutateAsync({ id });
       queryClient.invalidateQueries({ queryKey: getListOpenaiConversationsQueryKey() });
@@ -27,24 +26,24 @@ export default function HistoryPage() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
-      <div>
-        <h1 className="text-3xl font-serif font-bold text-foreground">Conversation History</h1>
-        <p className="text-muted-foreground mt-2">Resume past consultations or review legal drafts.</p>
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="mb-10">
+        <h1 className="text-4xl font-bold text-[#0f172a] mb-2">Conversation History</h1>
+        <p className="text-[#64748b]">Resume past consultations or review legal drafts.</p>
       </div>
 
       {isLoading ? (
         <div className="space-y-4">
           {[1, 2, 3].map((i) => (
-            <Skeleton key={i} className="h-24 w-full" />
+            <Skeleton key={i} className="h-24 w-full rounded-2xl" />
           ))}
         </div>
       ) : conversations?.length === 0 ? (
-        <div className="text-center py-12 bg-muted/30 rounded-lg border border-dashed">
-          <MessageSquare className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-          <h3 className="text-lg font-medium">No history yet</h3>
-          <p className="text-muted-foreground mb-6">Start a conversation to see it here.</p>
-          <Button asChild>
+        <div className="text-center py-16 bg-[#f8fafc] rounded-3xl border border-dashed border-[#e2e8f0]">
+          <MessageSquare className="h-12 w-12 text-[#cbd5e1] mx-auto mb-4" />
+          <h3 className="text-lg font-medium text-[#0f172a] mb-2">No history yet</h3>
+          <p className="text-[#64748b] mb-6">Start a conversation to see it here.</p>
+          <Button asChild className="bg-[#0f172a] hover:bg-[#1e293b] text-white rounded-xl">
             <Link href="/">Ask a Question</Link>
           </Button>
         </div>
@@ -52,12 +51,13 @@ export default function HistoryPage() {
         <div className="space-y-4">
           {conversations?.map((conv) => (
             <Link key={conv.id} href={`/chat/${conv.id}`}>
-              <Card className="hover:border-primary/50 transition-colors cursor-pointer group">
-                <CardHeader className="flex flex-row items-center justify-between p-4 sm:p-6">
+              <Card className="hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group border-[#e2e8f0] rounded-2xl">
+                <CardHeader className="flex flex-row items-center justify-between p-5 sm:p-6">
                   <div className="space-y-1 pr-6">
-                    <CardTitle className="text-lg font-serif">{conv.title}</CardTitle>
-                    <CardDescription>
-                      {new Date(conv.createdAt).toLocaleDateString(undefined, { 
+                    <CardTitle className="text-lg font-semibold text-[#0f172a]">{conv.title}</CardTitle>
+                    <CardDescription className="text-[#94a3b8] flex items-center gap-2">
+                      <Clock className="w-3 h-3" />
+                      {new Date(conv.createdAt).toLocaleDateString(undefined, {
                         year: 'numeric', month: 'long', day: 'numeric',
                         hour: '2-digit', minute: '2-digit'
                       })}
@@ -66,7 +66,7 @@ export default function HistoryPage() {
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="shrink-0 text-muted-foreground opacity-0 group-hover:opacity-100 hover:text-destructive hover:bg-destructive/10"
+                    className="shrink-0 text-[#cbd5e1] opacity-0 group-hover:opacity-100 hover:text-[#ef4444] hover:bg-[#ef4444]/10 transition-all h-9 w-9"
                     onClick={(e) => handleDelete(e, conv.id)}
                     disabled={deleteMutation.isPending}
                   >
