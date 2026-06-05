@@ -13,6 +13,8 @@ services:
     branch: main
     autoDeploy: true
     buildCommand: |
+      export PORT=8080
+      export BASE_PATH=/
       corepack enable
       pnpm install --frozen-lockfile
       pnpm --filter @workspace/web run build
