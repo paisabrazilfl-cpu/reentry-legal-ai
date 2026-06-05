@@ -34,6 +34,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", router);
 
+// Health check for Render
+app.get("/api/healthz", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // Single-service production deploy: serve the built web client from the API
 // server. In Replit dev the web runs as its own artifact, so this block is a
 // no-op there (no built client sits next to the server bundle).

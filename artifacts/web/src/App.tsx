@@ -7,6 +7,7 @@ import AskPage from "@/pages/Ask";
 import ChatPage from "@/pages/Chat";
 import HistoryPage from "@/pages/History";
 import ResourcesPage from "@/pages/Resources";
+import StateGuidePage from "@/pages/50StateGuide";
 import { Layout } from "@/components/Layout";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ function Router() {
         <Route path="/chat/:id" component={ChatPage} />
         <Route path="/history" component={HistoryPage} />
         <Route path="/resources" component={ResourcesPage} />
+        <Route path="/50-states" component={StateGuidePage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
