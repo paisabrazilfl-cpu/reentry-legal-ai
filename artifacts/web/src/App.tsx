@@ -8,6 +8,7 @@ import ChatPage from "@/pages/Chat";
 import HistoryPage from "@/pages/History";
 import ResourcesPage from "@/pages/Resources";
 import StateGuidePage from "@/pages/50StateGuide";
+import KyProgramsPage from "@/pages/KyPrograms";
 import { Layout } from "@/components/Layout";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/history" component={HistoryPage} />
         <Route path="/resources" component={ResourcesPage} />
         <Route path="/50-states" component={StateGuidePage} />
+        <Route path="/ky-programs" component={KyProgramsPage} />
         <Route component={NotFound} />
       </Switch>
     </Layout>

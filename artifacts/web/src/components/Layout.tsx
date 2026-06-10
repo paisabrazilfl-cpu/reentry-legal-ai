@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Scale, MessageSquare, History, BookOpen, MapPin } from "lucide-react";
+import { Scale, MessageSquare, History, BookOpen, MapPin, GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -11,6 +11,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { href: "/history", label: "History", icon: History },
     { href: "/resources", label: "Resources", icon: BookOpen },
     { href: "/50-states", label: "50 States", icon: MapPin },
+    { href: "/ky-programs", label: "KY Programs", icon: GraduationCap },
   ];
 
   return (
